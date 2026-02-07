@@ -1,0 +1,59 @@
+extends:
+  - '@workspace.foundation/t44/workspace.yaml'
+'#@workspace.foundation/t44/structs/ProjectDeploymentConfig.v0':
+  deployments:
+    t44-starter-static-simple:
+      web:
+        sourceDir: resolve('${__dirname}/../static-simple')
+        provider:
+          capsule: '@workspace.foundation/t44/caps/providers/bunny.net/ProjectDeployment.v0'
+          config:
+            ProjectSettings:
+              name: t44-static-simple
+              region: LA
+    t44-starter-next-hono:
+      api:
+        sourceDir: resolve('${__dirname}/../next-hono')
+        provider:
+          capsule: '@workspace.foundation/t44/caps/providers/vercel.com/ProjectDeployment.v0'
+          config:
+            ProjectSettings:
+              name: t44-next-hono-api
+              ssoProtection: null
+            /vercel.json:
+              framework: hono
+              buildCommand: turbo run build --filter=api
+              outputDirectory: apps/api/dist
+      web:
+        depends:
+          - api
+        sourceDir: resolve('${__dirname}/../next-hono')
+        provider:
+          capsule: '@workspace.foundation/t44/caps/providers/vercel.com/ProjectDeployment.v0'
+          config:
+            ENV:
+              API_URL: jit(join('https://',pick('../.~o/workspace.foundation/WorkspaceEntityFacts/o/vercel.com/projects/t44-next-hono-api.json','latestDeployments[0].alias[0]')))
+            ProjectSettings:
+              name: t44-next-hono-web
+              ssoProtection: null
+            /vercel.json:
+              framework: nextjs
+              buildCommand: turbo run build --filter=web
+              outputDirectory: apps/web/.next
+'#@workspace.foundation/t44/structs/WorkspaceProjectsConfig.v0':
+  projects:
+    static-simple:
+      sourceDir: /Users/christoph/spaces/genesis/workspace.foundation/packages/t44-starter/static-simple
+    next-hono:
+      sourceDir: /Users/christoph/spaces/genesis/workspace.foundation/packages/t44-starter/next-hono
+'#@workspace.foundation/t44/structs/WorkspaceConfig.v0':
+  rootDir: /Users/christoph/spaces/genesis/workspace.foundation/packages/t44-starter
+  rootConfigFilepath: .workspace/workspace.yaml
+  name: t44-starter
+  identifier: did:key:z6MkuduxNqYd6C8UkALcrVqz2hqu4mqMuVdc9r9gxcZkZRsp
+'#@workspace.foundation/t44/structs/WorkspaceKeyConfig.v0':
+  name: genesis
+  identifier: did:key:z6MkpEAZHdY6QGshxwqojAxeYihedovzx3CBFq8EpYWMBccD
+'#@workspace.foundation/t44/structs/ProjectRackConfig.v0':
+  name: genesis
+  identifier: did:key:z6MkvhPV7YrWdQNnNJRrfggSoU4Zkz8nFwEnQXf6aLBs6vjo
