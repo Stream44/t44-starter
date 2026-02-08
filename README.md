@@ -1,7 +1,7 @@
-t44 Workspace Starter
+Terminal44 Workspace Starter
 ===
 
-This workspace contains pre-built applications to get started with the [t44 Workspace Foundation](https://github.com/Stream44/t44) in a matter of minutes.
+This workspace contains pre-built applications to get started with the [Terminal44 Workspace Foundation](https://github.com/Stream44/t44) in a matter of minutes.
 
 Status
 ---
@@ -10,17 +10,19 @@ This project is in **early development** and not ready for production use. Every
 
 For now it is best used for small projects and exploration in non-mission critical settings.
 
-Do get in touch at [discord.gg](https://discord.gg/9eBcQXEJAN) ([Stream44.Studio](https://Stream44.Studio) server) if you are running it and need support.
+Get in touch at [discord.gg](https://discord.gg/9eBcQXEJAN) ([Stream44.Studio](https://Stream44.Studio) server) if you are running it and need support.
 
 Requirements
 ---
 
-- macOS (others will be supported)
+*Tested on macOS so far.*
+
 - [bun](https://bun.sh)
 - Optional
   - [vercel.com](https://vercel.com) account
   - [bunny.net](https://bunny.net/) account
   - [npmjs.com](https://npmjs.com/) account
+  - [github.com](https://github.com/) account
 
 Usage
 ---
@@ -56,16 +58,20 @@ dev next-hono
 All workspace commands:
 
 ```
-workspace --help
+help
 ```
 
 
 Examples
 ===
 
+- **static-simple** - A single static page.
+  - Frameworks: *none*
+  - Providers: `vercel.com`
+
 - **next-hono** - A simple one-page application.
   - Frameworks: `next`, `hono`
-  - Providers: `vercel`
+  - Providers: `bunny.net`
 
 
 Reference Material
@@ -76,7 +82,8 @@ Reference Material
   - [hono](https://hono.dev/)
 
 - Providers
-  - [Vercel](https://vercel.com)
+  - [vercel.com](https://vercel.com)
+  - [bunny.net](https://bunny.net/)
 
 
 License

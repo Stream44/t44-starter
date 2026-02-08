@@ -1,11 +1,16 @@
 {
-    "name": "@stream44.studio/t44-starter",
+    "name": "@t44.sh/t44-starter",
     "version": "0.1.0",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Stream44/t44-starter.git"
+    },
     "private": true,
     "type": "module",
     "dependencies": {
-        "@stream44.studio/t44": "^0.1.0",
-        "@stream44.studio/encapsulate": "^0.2.0-rc.4"
+        "@t44.sh/t44": "workspace:*",
+        "@encapsulate.dev/encapsulate": "workspace:*"
     },
     "devDependencies": {
         "@types/bun": "^1.3.4",
@@ -15,6 +20,6 @@
         "vercel": "^50.4.9"
     },
     "scripts": {
-        "postinstall": "bash ./node_modules/@workspace.foundation/t44/bin/postinstall.sh"
+        "postinstall": "bash ./node_modules/@t44.sh/t44/bin/postinstall.sh"
     }
 }
