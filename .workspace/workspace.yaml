@@ -46,8 +46,3 @@ extends:
       sourceDir: resolve('${__dirname}/../static-simple')
     next-hono:
       sourceDir: resolve('${__dirname}/../next-hono')
-'#@t44.sh/t44/structs/WorkspaceConfig.v0':
-  createdAt: '2026-02-08T21:31:33.118Z'
-  rootDir: /Users/christoph/spaces/genesis/t44.sh/packages/t44-starter
-  updatedAt: '2026-02-08T21:31:33.121Z'
-  rootConfigFilepath: .workspace/workspace.yaml
