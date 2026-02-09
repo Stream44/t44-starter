@@ -1,6 +1,6 @@
 {
   "name": "t44-starter",
-  "version": "0.2.0-rc.8",
+  "version": "0.2.0-rc.9",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "t44": "^0.2.0-rc.13",
+    "t44": "^0.2.0-rc.14",
     "@stream44.studio/encapsulate": "^0.2.0-rc.12"
   },
   "devDependencies": {
