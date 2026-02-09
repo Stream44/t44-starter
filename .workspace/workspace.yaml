@@ -1,12 +1,12 @@
 extends:
-  - '@t44.sh/t44/workspace.yaml'
-'#@t44.sh/t44/structs/ProjectDeploymentConfig.v0':
+  - 't44/workspace.yaml'
+'#t44/structs/ProjectDeploymentConfig.v0':
   deployments:
     t44-starter-static-simple:
       web:
         sourceDir: resolve('${__dirname}/../static-simple')
         provider:
-          capsule: '@t44.sh/t44/caps/providers/bunny.net/ProjectDeployment.v0'
+          capsule: 't44/caps/providers/bunny.net/ProjectDeployment.v0'
           config:
             ProjectSettings:
               name: t44-static-simple
@@ -15,7 +15,7 @@ extends:
       api:
         sourceDir: resolve('${__dirname}/../next-hono')
         provider:
-          capsule: '@t44.sh/t44/caps/providers/vercel.com/ProjectDeployment.v0'
+          capsule: 't44/caps/providers/vercel.com/ProjectDeployment.v0'
           config:
             ProjectSettings:
               name: t44-next-hono-api
@@ -29,7 +29,7 @@ extends:
           - api
         sourceDir: resolve('${__dirname}/../next-hono')
         provider:
-          capsule: '@t44.sh/t44/caps/providers/vercel.com/ProjectDeployment.v0'
+          capsule: 't44/caps/providers/vercel.com/ProjectDeployment.v0'
           config:
             ENV:
               API_URL: jit(join('https://',pick('../.~o/workspace.foundation/WorkspaceEntityFacts/o/vercel.com/projects/t44-next-hono-api.json','latestDeployments[0].alias[0]')))
@@ -40,7 +40,7 @@ extends:
               framework: nextjs
               buildCommand: turbo run build --filter=web
               outputDirectory: apps/web/.next
-'#@t44.sh/t44/structs/WorkspaceProjectsConfig.v0':
+'#t44/structs/WorkspaceProjectsConfig.v0':
   projects:
     static-simple:
       sourceDir: resolve('${__dirname}/../static-simple')
