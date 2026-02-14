@@ -34,20 +34,22 @@ Usage
 ---
 
 Clone the repository:
-
 ```
 git clone git@github.com:Stream44/t44-starter.git
 cd t44-starter
 ```
 
 Install dependencies:
-
 ```
 bun install
 ```
 
-Activate workspace:
+Initialize workspace:
+```
+.workspace/bin/t44 init
+```
 
+Activate workspace:
 ```
 source .workspace/bin/activate
 ```
