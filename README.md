@@ -95,6 +95,8 @@ Reference Material
 Provenance
 ===
 
+[![Gordian Open Integrity](https://github.com/Stream44/t44-starter/actions/workflows/gordian-open-integrity.yml/badge.svg)](https://github.com/Stream44/t44-starter/actions/workflows/gordian-open-integrity.yml?query=branch%3Amain) [![DCO Signatures](https://github.com/Stream44/t44-starter/actions/workflows/dco.yml/badge.svg)](https://github.com/Stream44/t44-starter/actions/workflows/dco.yml?query=branch%3Amain)
+
 Repository DID: `did:repo:17180489989bf9877f91739cd0c3d4e1985fca0a`
 
 <table>
