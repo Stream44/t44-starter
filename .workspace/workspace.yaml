@@ -1,0 +1,45 @@
+$schema: ../../../../.~o/workspace.foundation/@t44.sh~t44~caps~JsonSchemas/@t44.sh~t44~structs~WorkspaceConfigFile.json
+extends:
+  - 't44/workspace.yaml'
+'#t44/structs/ProjectDeploymentConfig':
+  deployments:
+    t44-starter-01-static-simple:
+      web:
+        sourceDir: resolve('${__dirname}/../01-static-simple')
+        provider:
+          capsule: 't44/caps/providers/bunny.net/ProjectDeployment'
+          config:
+            ProjectSettings:
+              name: t44-static-simple
+              region: LA
+    t44-starter-02-next-hono:
+      api:
+        sourceDir: resolve('${__dirname}/../02-next-hono')
+        provider:
+          capsule: 't44/caps/providers/vercel.com/ProjectDeployment'
+          config:
+            ProjectSettings:
+              name: t44-02-next-hono-api
+              ssoProtection: null
+            /vercel.json:
+              framework: hono
+              buildCommand: turbo run build --filter=api
+              outputDirectory: apps/api/dist
+      web:
+        depends:
+          - api
+        sourceDir: resolve('${__dirname}/../02-next-hono')
+        provider:
+          capsule: 't44/caps/providers/vercel.com/ProjectDeployment'
+          config:
+            ENV:
+              API_URL: jit(join('https://',pick('../.~o/workspace.foundation/WorkspaceEntityFacts/o/vercel.com/projects/t44-02-next-hono-api.json','latestDeployments[0].alias[0]')))
+            ProjectSettings:
+              name: t44-02-next-hono-web
+              ssoProtection: null
+            /vercel.json:
+              framework: nextjs
+              buildCommand: turbo run build --filter=web
+              outputDirectory: apps/web/.next
+  createdAt: '2026-02-14T02:00:50.492Z'
+  updatedAt: '2026-02-14T02:00:50.492Z'

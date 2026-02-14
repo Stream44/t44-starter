@@ -1,0 +1,11 @@
+{
+    "name": "01-static-simple",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "serve src -l 3000 --no-clipboard --no-compression -c ../serve.json"
+    },
+    "devDependencies": {
+        "serve": "^14.2.4"
+    }
+}

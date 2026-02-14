@@ -1,0 +1,17 @@
+{
+    "name": "api",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "dev": "bun run --watch src/index.ts"
+    },
+    "dependencies": {
+        "hono": "^4.11.4",
+        "@repo/constants": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.30",
+        "srvx": "^0.8.16",
+        "typescript": "^5.9.3"
+    }
+}
