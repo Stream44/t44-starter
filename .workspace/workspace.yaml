@@ -41,5 +41,5 @@ extends:
               framework: nextjs
               buildCommand: turbo run build --filter=web
               outputDirectory: apps/web/.next
-  createdAt: '2026-02-14T02:00:50.492Z'
-  updatedAt: '2026-02-14T02:00:50.492Z'
+  createdAt: '2026-02-14T05:12:51.165Z'
+  updatedAt: '2026-02-14T05:12:51.165Z'
