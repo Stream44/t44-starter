@@ -7,7 +7,7 @@ extends:
       web:
         sourceDir: resolve('${__dirname}/../01-static-simple')
         provider:
-          capsule: 't44/caps/providers/bunny.net/ProjectDeployment'
+          capsule: '@stream44.studio/t44-bunny.net/caps/StaticWebsite/ProjectDeployment'
           config:
             ProjectSettings:
               name: t44-static-simple
@@ -16,7 +16,7 @@ extends:
       api:
         sourceDir: resolve('${__dirname}/../02-next-hono')
         provider:
-          capsule: 't44/caps/providers/vercel.com/ProjectDeployment'
+          capsule: '@stream44.studio/t44-vercel.com/caps/ProjectDeployment'
           config:
             ProjectSettings:
               name: t44-02-next-hono-api
@@ -30,7 +30,7 @@ extends:
           - api
         sourceDir: resolve('${__dirname}/../02-next-hono')
         provider:
-          capsule: 't44/caps/providers/vercel.com/ProjectDeployment'
+          capsule: '@stream44.studio/t44-vercel.com/caps/ProjectDeployment'
           config:
             ENV:
               API_URL: jit(join('https://',pick('../.~o/workspace.foundation/WorkspaceEntityFacts/o/vercel.com/projects/t44-02-next-hono-api.json','latestDeployments[0].alias[0]')))
