@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "t44-starter-01-static-simple",
+      "name": "@stream44.studio/t44-starter-01-static-simple",
       "devDependencies": {
         "serve": "^14.2.4",
       },

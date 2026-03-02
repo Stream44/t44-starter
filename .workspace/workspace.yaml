@@ -1,7 +1,7 @@
 $schema: ../../../../.~o/workspace.foundation/@t44.sh~t44~caps~JsonSchemas/@t44.sh~t44~structs~WorkspaceConfigFile.json
 extends:
-  - 't44/workspace.yaml'
-'#t44/structs/ProjectDeploymentConfig':
+  - '@stream44.studio/t44/workspace.yaml'
+'#@stream44.studio/t44/structs/ProjectDeploymentConfig':
   deployments:
     t44-starter-01-static-simple:
       web:
